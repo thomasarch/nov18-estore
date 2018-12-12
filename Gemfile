@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'faker'
+gem 'nokogiri'
+
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
