@@ -72,6 +72,9 @@
               <li><%= link_to "Sign In", new_user_session_path %></li>
             <% end %>
 
+            <li><%= link_to "View Cart", view_order_path %></li>
+            <li><a href="#"><%= LineItem.sum(:quantity) %> items in cart</a></li>
+
           </ul>
         </div>
       </div>

@@ -1,0 +1,14 @@
+<h1>Thanks!</h1>
+<p>Let's review your order:</p>
+
+<% @order.order_items.each do |key, value| %>
+	<ul>
+		<li><%= Product.find(key).name %>, <%= value %></li>
+	</ul>
+<% end %>
+
+<p>
+	<strong>Subtotal: </strong> <%= money(@order.subtotal) %><br>
+	<strong>Tax: </strong> <%= money(@order.sales_tax) %><br>
+	<strong>Order Total:</strong> <%= money(@order.grand_total) %>
+</p>

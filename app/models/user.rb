@@ -6,5 +6,11 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  has_many :orders
+
+  def admin?
+  	role == "admin"
+  end
+
   
 end
